@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    float diff1, diff2, diff3, diff4, diff5, diff6, diff7, diff8;
+    cin>> diff1>>diff2>>diff3>>diff4>>diff5>>diff6>>diff7>>diff8;
+    float golfhandicap = ((diff1+diff2+diff3+diff4+diff5+diff6+diff7+diff8)/8);
+cout << golfhandicap<<endl;
+
+
+    return 0;
+}
