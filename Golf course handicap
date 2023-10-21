@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+//first file
+ float golfershandicap1;
+ cin >> golfershandicap1;
+
+//second file
+
+float courserating1, sloperating1, coursepar1;
+cin >> courserating1>> sloperating1>>coursepar1;
+
+float coursehandicap = ((golfershandicap1*(sloperating1/113)+(courserating1-coursepar1)));
+
+cout << coursehandicap<< endl;
+
+    return 0;
+}
