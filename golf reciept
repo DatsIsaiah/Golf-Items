@@ -1,0 +1,186 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+
+
+
+//variables
+string date;
+string time;
+float holes;
+bool cart;
+bool rentalclub;
+bool rangeballs;
+
+//date error
+cin >> date;
+if (date == "Monday" || date == "Tuesday" || date == "Wednesday" || date == "Thursday" || date == "Friday" || date == "Saturday" || date == "Sunday"){
+    } else {
+            cout << "Invalid information" << endl;
+        return 0;
+    }
+    //time error
+cin >> time;
+if (time == "Morning" || time == "Afternoon" || time == "Twilight"){
+    } else {
+            cout << "Invalid information" << endl;
+        return 0;
+    }
+    // hole error
+cin >> holes;
+if (holes == 18 || holes == 9){
+    } else {
+            cout << "Invalid information" << endl;
+        return 0;
+    }
+cin >> cart;
+if (cart == 0 || cart == 1){
+    } else {
+            cout << "Invalid information" << endl;
+        return 0;
+    }
+cin >> rentalclub;
+if (rentalclub == 0 || rentalclub == 1){
+    } else {
+            cout << "Invalid information" << endl;
+        return 0;
+    }
+cin >> rangeballs;
+if (rangeballs == 0 || rangeballs == 1){
+    } else {
+            cout << "Invalid information" << endl;
+        return 0;
+    }
+
+// error codes
+//if (date > "Monday"){
+//        cout << "Invalid information" << endl;
+//        return 0;
+//    }
+
+
+
+
+//recipt start
+cout << "---------------------" << endl;
+cout << "       RECEIPT       " << endl;
+cout << "---------------------" << endl;
+cout << "Day: " << date << endl;
+cout << "Time: " << time << endl;
+cout << "Holes: " << holes << endl;
+cout << "Cart: ";
+if (cart == 1) {
+cout << "Yes"<< endl;
+}else {
+cout << "No" << endl;
+}
+
+cout << endl << "EXTRAS"<< endl;
+cout << "Rental Clubs: ";
+if (rentalclub == 1) {
+cout << "Yes"<< endl;
+}else {
+cout << "No" << endl;
+}
+cout << "Range Balls: ";
+if (rangeballs == 1) {
+cout << "Yes"<< endl;
+}else {
+cout << "No" << endl;
+}
+cout << endl;
+
+//price summary
+cout << "PRICE SUMMARY"<< endl;
+cout << "Green Fee:    $";
+//greenfee
+float greenfee;
+
+if (holes == 18 || holes ==9) {
+if (date == "Monday" || date == "Tuesday" || date == "Wednesday" || date == "Thursday" || date == "Friday") {
+if (time == "Morning" ) {
+greenfee = 45;
+}
+if (time == "Afternoon" ) {
+greenfee = 30;
+}
+if (time == "Twilight") {
+greenfee = 25;
+}
+}
+if (date == "Saturday" || date == "Sunday") {
+if (time == "Morning" ) {
+greenfee = 60;
+}
+if (time == "Afternoon" ) {
+greenfee = 40;
+}
+if (time == "Twilight") {
+greenfee = 35;
+}
+}
+}
+
+float greenfee1;
+
+ if (holes == 9) {
+greenfee1 = (greenfee / 2);
+}
+ if (holes == 18) {
+greenfee1 = (greenfee);
+}
+cout << greenfee1 << endl;
+
+// cart, club, and ball fees
+
+float cartfee;
+if (cart == 1) {
+if (holes== 9) {
+cartfee = 10;
+}
+if (holes== 18) {
+cartfee = 20;
+}
+}else {
+cartfee = 0;
+}
+
+cout <<"Cart Fee:     $" << cartfee << endl;
+
+
+
+
+float clubfee;
+if (rentalclub == 1) {
+clubfee = 15;
+}else {
+clubfee = 0;
+}
+if (clubfee >0) {
+cout <<"Rental Clubs: $" << clubfee << endl;
+}
+
+
+
+float ballfee;
+if (rangeballs == 1) {
+ballfee = 7;
+}else {
+ballfee = 0;
+}
+if (ballfee>0) {
+cout <<"Range Balls:  $"<< ballfee << endl;
+}
+
+
+//total
+cout << "Total:        $";
+float total = (greenfee1 + cartfee + clubfee + ballfee);
+cout << total << endl;
+
+
+
+    return 0;
+}
