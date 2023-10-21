@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+//adjustedgross
+float s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16,s17,s18;
+cin >>s1>>s2>>s3>>s4>>s5>>s6>>s7>>s8>>s9>>s10>>s11>>s12>>s13>>s14>>s15>>s16>>s17>>s18;
+float adjustedgross= (s1+s2+s3+s4+s5+s6+s7+s8+s9+s10+s11+s12+s13+s14+s15+s16+s17+s18);
+
+
+
+//equation
+float courserating;
+cin >> courserating;
+float sloperating;
+cin >> sloperating;
+
+float golfdifferential = ((adjustedgross-courserating)*113/sloperating);
+cout << golfdifferential<<endl;
+
+    return 0;
+}
